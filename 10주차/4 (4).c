@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    int cnt[10] = {0}, n, i;
+    while (1) {
+        scanf("%d", &n);
+        if (n == 0)
+            break;
+        cnt[n / 10]++;
+    }
+    for (i = 0; i < 10; i++)
+        if (cnt[i] > 0)
+            printf("%d : %d\n", i, cnt[i]);
+    return 0;
+}
